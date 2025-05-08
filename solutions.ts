@@ -41,7 +41,7 @@ class Vehicle {
     getInfo() {
         return `Make: ${this.make}, Year: ${this.year}`
     }
-}
+};
 
 class Car extends Vehicle {
     private model: string;
@@ -54,4 +54,16 @@ class Car extends Vehicle {
     getModel() {
         return `Model: ${this.model}`
     }
-}
+};
+
+
+
+function processValue(value: string | number): number {
+    if (typeof value === "string") {
+        return value.length
+    }
+    return value * 2
+};
+
+
+
