@@ -67,3 +67,12 @@ function processValue(value: string | number): number {
 
 
 
+interface Product {
+    name: string;
+    price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+    const mostExpensiveProduct = products.reduce((previousProduct, currentProduct) => previousProduct.price < currentProduct.price ? currentProduct : previousProduct);
+    return mostExpensiveProduct;
+};
