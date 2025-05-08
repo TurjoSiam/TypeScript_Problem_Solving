@@ -76,3 +76,21 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     const mostExpensiveProduct = products.reduce((previousProduct, currentProduct) => previousProduct.price < currentProduct.price ? currentProduct : previousProduct);
     return mostExpensiveProduct;
 };
+
+
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+function getDayType(day: Day): string {
+    return (day === Day.Saturday || day === Day.Sunday) ? "Weekend" : "Weekday"
+};
+
+
